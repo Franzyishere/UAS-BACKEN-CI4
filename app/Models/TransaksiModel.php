@@ -6,20 +6,20 @@ use CodeIgniter\Model;
 
 class TransaksiModel extends Model
 {
-    protected $table = 'transaksi';
+    protected $table = 'transaksii';
     protected $primaryKey = 'id_transaksi';
     protected $useAutoIncrement = true;
     protected $returnType = 'array';
     protected $useSoftDeletes = false;
     protected $protectFields = true;
-    protected $allowedFields = ['nama', 'no_tlp', 'alamat', 'metode_pembayaran'];
+    protected $allowedFields = ['nama', 'no_tlp', 'alamat', 'metode_pembayaran', 'created_at', 'updated_at'];
 
-    // // Dates
-    // protected $useTimestamps = true;
-    // protected $dateFormat = 'datetime';
-    // protected $createdField = 'created_at';
-    // protected $updatedField = 'updated_at';
-    // protected $deletedField = 'deleted_at';
+    // Dates
+    protected $useTimestamps = true;
+    protected $dateFormat = 'datetime';
+    protected $createdField = 'created_at';
+    protected $updatedField = 'updated_at';
+    protected $deletedField = 'deleted_at';
 
     // Validation
     protected $validationRules = [
